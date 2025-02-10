@@ -26,6 +26,12 @@ jobs:
       # Install the .NET SDK indicated in the global.json file
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
+        
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build solution
+        run: dotnet build --configuration Release --no-restore
 
       - name: 'Get Version'
         id: version
