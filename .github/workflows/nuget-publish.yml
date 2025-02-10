@@ -42,14 +42,14 @@ jobs:
           retention-days: 7
           path: ${{ env.NuGetDirectory }}/*.nupkg
 
-#  run_test:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v3
-#      - name: Setup .NET
-#        uses: actions/setup-dotnet@v4
-#      - name: Run tests
-#        run: dotnet test ./MidTempoHub.NET.Test/MidTempoHub.NET.Test.sln --configuration Release
+  run_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+      - name: Run tests
+        run: dotnet test MidTempo.Messaging.sln --configuration Release
 
   deploy:
     # Publish only when creating a GitHub Release
@@ -60,7 +60,6 @@ jobs:
     permissions:
       packages: write
       contents: read
-    # needs: [ validate_nuget, run_test ]
     needs: [ create_nuget, run_test ]
     steps:
       # Download the NuGet package created in the previous job

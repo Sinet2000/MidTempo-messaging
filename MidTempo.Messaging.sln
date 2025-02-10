@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidTempoHub.Messaging.Teleg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidTempoHub.Messaging.WhatsApp", "src\MidTempoHub.Messaging.WhatsApp\MidTempoHub.Messaging.WhatsApp.csproj", "{55E68F40-C50D-4A13-9B94-CC63C4C4410F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5BECDFC4-DF6E-41A6-809B-F781FBEE27FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidTempoHub.Messaging.Tests", "tests\MidTempoHub.Messaging.Tests\MidTempoHub.Messaging.Tests.csproj", "{0B96FA84-5C58-4E7D-A32D-D8DDB154633B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,12 @@ Global
 		{55E68F40-C50D-4A13-9B94-CC63C4C4410F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55E68F40-C50D-4A13-9B94-CC63C4C4410F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55E68F40-C50D-4A13-9B94-CC63C4C4410F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B96FA84-5C58-4E7D-A32D-D8DDB154633B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B96FA84-5C58-4E7D-A32D-D8DDB154633B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B96FA84-5C58-4E7D-A32D-D8DDB154633B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B96FA84-5C58-4E7D-A32D-D8DDB154633B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0B96FA84-5C58-4E7D-A32D-D8DDB154633B} = {5BECDFC4-DF6E-41A6-809B-F781FBEE27FE}
 	EndGlobalSection
 EndGlobal
