@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidTempo.Messaging", "src\MidTempo.Messaging\MidTempo.Messaging.csproj", "{97A294D4-0A0D-4E6C-8BAF-38FC67886EDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidTempoHub.Messaging", "src\MidTempoHub.Messaging\MidTempoHub.Messaging.csproj", "{97A294D4-0A0D-4E6C-8BAF-38FC67886EDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidTempo.Messaging.Email", "src\MidTempo.Messaging.Email\MidTempo.Messaging.Email.csproj", "{CA715069-E244-4F82-A5F4-A7A42112A4E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidTempoHub.Messaging.Email", "src\MidTempoHub.Messaging.Email\MidTempoHub.Messaging.Email.csproj", "{CA715069-E244-4F82-A5F4-A7A42112A4E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidTempo.Messaging.Telegram", "src\MidTempo.Messaging.Telegram\MidTempo.Messaging.Telegram.csproj", "{26F9A63E-F4B3-4AA7-8A61-84D557C243C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidTempoHub.Messaging.Telegram", "src\MidTempoHub.Messaging.Telegram\MidTempoHub.Messaging.Telegram.csproj", "{26F9A63E-F4B3-4AA7-8A61-84D557C243C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidTempo.Messaging.WhatsApp", "src\MidTempo.Messaging.WhatsApp\MidTempo.Messaging.WhatsApp.csproj", "{55E68F40-C50D-4A13-9B94-CC63C4C4410F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidTempoHub.Messaging.WhatsApp", "src\MidTempoHub.Messaging.WhatsApp\MidTempoHub.Messaging.WhatsApp.csproj", "{55E68F40-C50D-4A13-9B94-CC63C4C4410F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

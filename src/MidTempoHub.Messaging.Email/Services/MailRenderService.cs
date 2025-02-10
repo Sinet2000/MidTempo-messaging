@@ -1,7 +1,7 @@
 using System.Text.RegularExpressions;
-using MidTempo.Messaging.Email.Interfaces;
+using MidTempoHub.Messaging.Email.Interfaces;
 
-namespace MidTempo.Messaging.Email.Services;
+namespace MidTempoHub.Messaging.Email.Services;
 
 public class MailRenderService : IMailRenderService
 {

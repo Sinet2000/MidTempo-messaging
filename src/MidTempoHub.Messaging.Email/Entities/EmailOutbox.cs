@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace MidTempo.Messaging.Email.Entities;
+namespace MidTempoHub.Messaging.Email.Entities;
 
 public class EmailOutbox
 {

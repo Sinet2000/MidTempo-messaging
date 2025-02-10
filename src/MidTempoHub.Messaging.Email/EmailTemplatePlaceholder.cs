@@ -1,4 +1,4 @@
-namespace MidTempo.Messaging.Email;
+namespace MidTempoHub.Messaging.Email;
 
 public static class EmailTemplatePlaceholder
 {

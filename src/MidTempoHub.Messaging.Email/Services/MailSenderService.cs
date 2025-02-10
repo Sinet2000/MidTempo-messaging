@@ -1,12 +1,12 @@
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Options;
-using MidTempo.Messaging.Email.DTOs;
-using MidTempo.Messaging.Email.Interfaces;
-using MidTempo.Messaging.Email.Setup;
+using MidTempoHub.Messaging.Email.DTOs;
+using MidTempoHub.Messaging.Email.Interfaces;
+using MidTempoHub.Messaging.Email.Setup;
 using MimeKit;
 
-namespace MidTempo.Messaging.Email.Services;
+namespace MidTempoHub.Messaging.Email.Services;
 
 public class MailSenderService(IOptions<SmtpConfig> config) : IMailSenderService
 {

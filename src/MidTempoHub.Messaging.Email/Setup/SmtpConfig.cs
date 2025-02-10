@@ -1,4 +1,4 @@
-namespace MidTempo.Messaging.Email.Setup;
+namespace MidTempoHub.Messaging.Email.Setup;
 
 public record SmtpConfig
 {

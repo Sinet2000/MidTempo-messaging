@@ -4,10 +4,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>MidTempo.Messaging</PackageId>
+    <PackageId>MidTempoHub.Messaging.Email</PackageId>
     <Version>1.0.0</Version>
     <Authors>Nikita Nikitins</Authors>
-    <Description>A flexible messaging library for .NET, providing services and helpers for Email, Telegram, WhatsApp, and more. Configure all or select specific communication methods as needed.</Description>
+    <Description>Email sender service with domain entites &amp; placehodler constants used in templator.</Description>
     <RepositoryUrl>https://github.com/Sinet2000/MidTempo-messaging</RepositoryUrl>
     <PackageTags>dotnet;mimekit;</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

@@ -1,8 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
-using MidTempo.Messaging.Email.Interfaces;
-using MidTempo.Messaging.Email.Services;
+using MidTempoHub.Messaging.Email.Interfaces;
+using MidTempoHub.Messaging.Email.Services;
 
-namespace MidTempo.Messaging.Email.Setup;
+namespace MidTempoHub.Messaging.Email.Setup;
 
 public static class MailSenderSetup
 {

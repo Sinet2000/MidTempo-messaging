@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 
-namespace MidTempo.Messaging.Email.Setup;
+namespace MidTempoHub.Messaging.Email.Setup;
 
 public class SmtpConfigSetup(IConfiguration configuration) : IConfigureOptions<SmtpConfig>
 {

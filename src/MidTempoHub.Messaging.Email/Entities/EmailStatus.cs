@@ -1,4 +1,4 @@
-namespace MidTempo.Messaging.Email.Entities;
+namespace MidTempoHub.Messaging.Email.Entities;
 
 public enum EmailStatus : byte
 {

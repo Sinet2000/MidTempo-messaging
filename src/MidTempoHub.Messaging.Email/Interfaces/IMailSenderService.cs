@@ -1,6 +1,6 @@
-using MidTempo.Messaging.Email.DTOs;
+using MidTempoHub.Messaging.Email.DTOs;
 
-namespace MidTempo.Messaging.Email.Interfaces;
+namespace MidTempoHub.Messaging.Email.Interfaces;
 
 public interface IMailSenderService
 {
