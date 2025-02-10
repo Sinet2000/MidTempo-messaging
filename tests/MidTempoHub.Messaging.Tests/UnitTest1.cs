@@ -1,10 +1,9 @@
-namespace MidTempo.Messaging.Tests;
+namespace MidTempoHub.Messaging.Tests;
 
 public class UnitTest1
 {
     [Fact]
     public void Test1()
     {
-
     }
 }

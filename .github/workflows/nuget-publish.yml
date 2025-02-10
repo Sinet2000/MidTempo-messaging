@@ -1,8 +1,9 @@
 name: Publish NuGet Packages
 
 on:
-  release:
-    types: [published]  # Run the workflow when a new GitHub release is published
+  push:
+    tags:
+      - 'v*'  # Runs when pushing a tag like v1.0.0
 
 env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
@@ -25,6 +26,12 @@ jobs:
       # Install the .NET SDK indicated in the global.json file
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
+        
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build solution
+        run: dotnet build --configuration Release --no-restore
 
       - name: 'Get Version'
         id: version
@@ -34,41 +41,34 @@ jobs:
         run: dotnet pack src/MidTempoHub.Messaging.Email/MidTempoHub.Messaging.Email.csproj --configuration Release -p:PackageVersion=${{ steps.version.outputs.version-without-v }} --output ${{ env.NuGetDirectory }}
       
       # Publish the NuGet package as an artifact, so they can be used in the following jobs
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: nuget
           if-no-files-found: error
           retention-days: 7
           path: ${{ env.NuGetDirectory }}/*.nupkg
 
-#  run_test:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v3
-#      - name: Setup .NET
-#        uses: actions/setup-dotnet@v4
-#      - name: Run tests
-#        run: dotnet test ./MidTempoHub.NET.Test/MidTempoHub.NET.Test.sln --configuration Release
+  run_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+      - name: Run tests
+        run: dotnet test MidTempo.Messaging.sln --configuration Release
 
   deploy:
-    # Publish only when creating a GitHub Release
-    # https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository
-    # You can update this logic if you want to manage releases differently
-    if: github.event_name == 'release' # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#github-context
     runs-on: ubuntu-latest
     permissions:
       packages: write
       contents: read
-    # needs: [ validate_nuget, run_test ]
     needs: [ create_nuget, run_test ]
     steps:
-      # Download the NuGet package created in the previous job
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: nuget
           path: ${{ env.NuGetDirectory }}
 
-      # Install the .NET SDK indicated in the global.json file
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v4
 
