@@ -1,8 +1,9 @@
 name: Publish NuGet Packages
 
 on:
-  release:
-    types: [published]  # Run the workflow when a new GitHub release is published
+  push:
+    tags:
+      - 'v*'  # Runs when pushing a tag like v1.0.0
 
 env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
