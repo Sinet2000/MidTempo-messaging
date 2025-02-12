@@ -2,7 +2,6 @@ using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Options;
 using MidTempoHub.Messaging.Email.DTOs;
-using MidTempoHub.Messaging.Email.Interfaces;
 using MidTempoHub.Messaging.Email.Setup;
 using MimeKit;
 
@@ -40,4 +39,9 @@ public class MailSenderService(IOptions<SmtpConfig> config) : IMailSenderService
 
         await smtpClient.DisconnectAsync(true, cancellationToken);
     }
+}
+
+public interface IMailSenderService
+{
+    Task SendAsync(EmailMessageDto request, CancellationToken cancellationToken = default);
 }

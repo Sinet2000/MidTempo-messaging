@@ -1,4 +1,4 @@
-namespace MidTempoHub.Messaging.Email.Interfaces;
+namespace MidTempoHub.Messaging.Email;
 
 public interface IEmailBgRunnerService
 {
