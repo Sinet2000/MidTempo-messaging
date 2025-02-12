@@ -1,0 +1,33 @@
+name: (DEV) Build & Test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  create_nuget:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Get all history to allow automatic versioning using MinVer
+
+      - name: Check PR Source Branch
+        run: |
+          if [[ "${{ github.base_ref }}" == "main" && "${{ github.head_ref }}" != "develop" ]]; then
+            echo "❌ PRs to 'main' must come from 'develop' only!"
+            exit 1
+          fi
+    
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build solution
+        run: dotnet build --configuration Release --no-restore
+        
+      - name: Run tests
+        run: dotnet test MidTempo.Messaging.sln --configuration Release
