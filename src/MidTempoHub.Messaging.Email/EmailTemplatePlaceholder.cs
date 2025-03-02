@@ -5,6 +5,7 @@ public static class EmailTemplatePlaceholder
     public const string ProductName = "{{product_name}}";
     public const string SenderName = "{{sender_name}}";
     public const string Name = "{{name}}";
+    public const string Link = "{{link}}";
 
     public static class Company
     {
@@ -25,5 +26,11 @@ public static class EmailTemplatePlaceholder
         public const string PropPlaceholder = "[]";
         public const string EachStart = "{{#each []}}";
         public const string EachEnd = "{{/each}}";
+    }
+
+    public static class Identity
+    {
+        public const string PasswordReset = "{{password_reset}}";
+        public const string ConfirmEmail = "{{confirm_email}}";
     }
 }
